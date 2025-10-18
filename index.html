@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Matched - Luxury Matchmaking Event</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0d9488',
+                        secondary: '#f59e0b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <div class="text-2xl font-['Pacifico'] text-primary">CLUB MATCHED</div>
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#event-details" class="text-gray-700 hover:text-primary transition-colors">Event Details</a>
+                        <a href="#speakers" class="text-gray-700 hover:text-primary transition-colors">Speakers</a>
+                        <a href="#agenda" class="text-gray-700 hover:text-primary transition-colors">Agenda</a>
+                        <a href="#sponsors" class="text-gray-700 hover:text-primary transition-colors">Sponsors</a>
+                        <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                <button class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-secondary/90 transition-colors whitespace-nowrap">
+                    Log in
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=romantic%20luxury%20beach%20scene%20with%20elegant%20couple%20embracing%20among%20tropical%20palm%20fronds%2C%20golden%20sunset%20lighting%2C%20luxury%20resort%20setting%2C%20soft%20romantic%20atmosphere%2C%20high-end%20photography%20style%2C%20white%20sand%20beach%2C%20crystal%20clear%20water%2C%20tropical%20paradise%2C%20sophisticated%20romantic%20ambiance%2C%20professional%20wedding%20photography%20style&width=1920&height=1080&seq=hero001&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-light mb-6 leading-tight">
+                EMBRACING LUXURY MATCHMAKING:<br>
+                <span class="font-normal">CURATING YOUR LIFESTYLE ONE DATE AT A TIME</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Join us for an exclusive evening of luxury matchmaking insights and networking
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
+                <div class="text-lg">
+                    <span class="font-semibold">December 15, 2024</span> • 7:00 PM - 10:00 PM
+                </div>
+                <div class="text-lg">
+                    The Ritz-Carlton, Beverly Hills
+                </div>
+            </div>
+            <button class="bg-primary text-white px-8 py-4 text-lg !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                RSVP NOW
+            </button>
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section id="event-details" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">Event Details</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    An exclusive gathering of luxury matchmaking professionals, successful singles, and industry leaders
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+                        <i class="ri-calendar-line text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Date & Time</h3>
+                    <p class="text-gray-600 mb-2">December 15, 2024</p>
+                    <p class="text-gray-600 mb-2">7:00 PM - 10:00 PM PST</p>
+                    <p class="text-gray-600">Cocktail reception & networking</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+                        <i class="ri-map-pin-line text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Venue</h3>
+                    <p class="text-gray-600 mb-2">The Ritz-Carlton, Beverly Hills</p>
+                    <p class="text-gray-600 mb-2">9900 Wilshire Blvd</p>
+                    <p class="text-gray-600">Beverly Hills, CA 90210</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+                        <i class="ri-user-star-line text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Dress Code</h3>
+                    <p class="text-gray-600 mb-2">Cocktail Attire</p>
+                    <p class="text-gray-600 mb-2">Business Formal</p>
+                    <p class="text-gray-600">Elegant & Sophisticated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">Featured Speakers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Learn from industry experts and successful matchmaking professionals
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20elegant%20woman%20matchmaker%20expert%2C%20sophisticated%20business%20portrait%2C%20luxury%20setting%2C%20confident%20smile%2C%20professional%20headshot%20photography%2C%20high-end%20business%20attire%2C%20warm%20lighting%2C%20executive%20portrait%20style&width=300&height=300&seq=speaker001&orientation=squarish" alt="Dr. Sarah Mitchell" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Dr. Sarah Mitchell</h3>
+                    <p class="text-primary mb-3">Luxury Matchmaking Expert</p>
+                    <p class="text-gray-600 text-sm">15+ years in elite matchmaking with Fortune 500 executives and celebrities</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=distinguished%20gentleman%20relationship%20coach%2C%20professional%20business%20portrait%2C%20luxury%20office%20setting%2C%20confident%20executive%2C%20sophisticated%20business%20attire%2C%20warm%20professional%20lighting%2C%20high-end%20headshot%20photography&width=300&height=300&seq=speaker002&orientation=squarish" alt="James Rodriguez" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">James Rodriguez</h3>
+                    <p class="text-primary mb-3">Relationship Psychology Expert</p>
+                    <p class="text-gray-600 text-sm">Harvard-trained psychologist specializing in high-achiever relationships</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%20professional%20woman%20dating%20coach%2C%20luxury%20business%20portrait%2C%20sophisticated%20office%20environment%2C%20confident%20smile%2C%20high-end%20business%20attire%2C%20professional%20headshot%20photography%2C%20warm%20executive%20lighting&width=300&height=300&seq=speaker003&orientation=squarish" alt="Victoria Chen" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Victoria Chen</h3>
+                    <p class="text-primary mb-3">Dating Technology Pioneer</p>
+                    <p class="text-gray-600 text-sm">Former Silicon Valley executive, founder of premium dating platforms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agenda Section -->
+    <section id="agenda" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">Event Agenda</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A carefully curated evening of insights, networking, and luxury experiences
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm flex items-center">
+                        <div class="w-20 text-center">
+                            <div class="text-2xl font-light text-primary">7:00</div>
+                            <div class="text-sm text-gray-500">PM</div>
+                        </div>
+                        <div class="flex-1 ml-6">
+                            <h3 class="text-xl font-semibold mb-2">Welcome Reception & Cocktails</h3>
+                            <p class="text-gray-600">Networking with premium champagne and hors d'oeuvres</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm flex items-center">
+                        <div class="w-20 text-center">
+                            <div class="text-2xl font-light text-primary">7:30</div>
+                            <div class="text-sm text-gray-500">PM</div>
+                        </div>
+                        <div class="flex-1 ml-6">
+                            <h3 class="text-xl font-semibold mb-2">Keynote: The Future of Luxury Matchmaking</h3>
+                            <p class="text-gray-600">Dr. Sarah Mitchell on evolving trends in elite dating</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm flex items-center">
+                        <div class="w-20 text-center">
+                            <div class="text-2xl font-light text-primary">8:15</div>
+                            <div class="text-sm text-gray-500">PM</div>
+                        </div>
+                        <div class="flex-1 ml-6">
+                            <h3 class="text-xl font-semibold mb-2">Panel: Technology Meets Tradition</h3>
+                            <p class="text-gray-600">Expert discussion on modern matchmaking innovations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm flex items-center">
+                        <div class="w-20 text-center">
+                            <div class="text-2xl font-light text-primary">9:00</div>
+                            <div class="text-sm text-gray-500">PM</div>
+                        </div>
+                        <div class="flex-1 ml-6">
+                            <h3 class="text-xl font-semibold mb-2">Exclusive Networking & Club Presentation</h3>
+                            <p class="text-gray-600">Private member opportunities and closing reception</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Form -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">Reserve Your Spot</h2>
+                <p class="text-xl text-gray-600">
+                    Limited seating available for this exclusive event
+                </p>
+            </div>
+            
+            <form class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                        <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                        <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Company/Organization</label>
+                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Dietary Restrictions</label>
+                    <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Please specify any dietary restrictions or allergies"></textarea>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="sr-only">
+                        <div class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center mr-3 cursor-pointer checkbox-custom">
+                            <i class="ri-check-line text-white text-sm hidden"></i>
+                        </div>
+                        <span class="text-sm text-gray-700">I will be bringing a plus-one guest</span>
+                    </label>
+                </div>
+                
+                <div class="mb-8">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Special Requests or Questions</label>
+                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Any special accommodations or questions about the event"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary text-white py-4 !rounded-button text-lg font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">
+                    Confirm RSVP
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12 items-center">
+                <div class="text-center">
+                    <div class="w-24 h-24 mx-auto mb-6 relative">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20vintage%20camera%20icon%20in%20rose%20gold%20bronze%20color%2C%20elegant%20geometric%20design%2C%20minimalist%20luxury%20style%2C%20sophisticated%20product%20photography%2C%20clean%20white%20background%2C%20premium%20brand%20aesthetic%2C%20high-end%20design%20element&width=200&height=200&seq=service001&orientation=squarish" alt="Camera Icon" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-light mb-4">PREMIERE REPRESENTATION</h3>
+                    <p class="text-gray-600">We want to see you succeed. The Club is partnered with some of the best in the beauty, health, photography and fashion industries to help members look and feel their best.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-24 h-24 mx-auto mb-6 relative">
+                        <img src="https://readdy.ai/api/search-image?query=abstract%20circular%20technology%20design%20in%20rose%20gold%20bronze%20color%2C%20modern%20geometric%20pattern%2C%20luxury%20tech%20aesthetic%2C%20sophisticated%20digital%20art%2C%20clean%20white%20background%2C%20premium%20brand%20design%2C%20elegant%20circular%20motif&width=200&height=200&seq=service002&orientation=squarish" alt="Technology Icon" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-light mb-4">TRANSPARENCY THROUGH TECHNOLOGY</h3>
+                    <p class="text-gray-600">Easily access your file to review your matches, leave feedback, and notify us of your availability through the member login portal. View real-time updates made on your file and feel confident about the matches being curated on your behalf.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-24 h-24 mx-auto mb-6 relative">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20compass%20icon%20in%20rose%20gold%20bronze%20color%2C%20elegant%20navigation%20design%2C%20sophisticated%20vintage%20style%2C%20premium%20brand%20aesthetic%2C%20clean%20white%20background%2C%20high-end%20design%20element%2C%20classic%20compass%20motif&width=200&height=200&seq=service003&orientation=squarish" alt="Compass Icon" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-light mb-4">COACHING</h3>
+                    <p class="text-gray-600">You're not alone in this, with a combined 10+ years of experience in the dating arena, our passionate Club Officials are happy to help!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">THE BENEFITS</h2>
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-600">
+                            Club members enjoy total control over their dating profile. They can update, leave feedback, review matches, and select their next dates, all while we take care of the rest.
+                        </p>
+                        <p class="text-lg text-gray-600">
+                            With customizable memberships, members can enjoy coaching, health experts, curated dating, and image consulting. At orientation, members enjoy champagne and a professional photoshoot, setting them up for ultimate success in the Club.
+                        </p>
+                        <button class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+                            Learn More
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://readdy.ai/api/search-image?query=elegant%20mature%20professional%20couple%20smiling%20together%2C%20luxury%20lifestyle%20photography%2C%20sophisticated%20business%20attire%2C%20warm%20intimate%20lighting%2C%20high-end%20portrait%20style%2C%20successful%20relationship%2C%20premium%20couple%20photography%2C%20refined%20aesthetic&width=600&height=700&seq=benefits001&orientation=portrait" alt="Professional Couple" class="w-full rounded-2xl object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">OUR STORY</h2>
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-600">
+                            The ultimate club for the modern single seeking luxury matchmaking for a fraction of the cost. With 10+ years of combined experience in dating apps, websites and matchmaking agencies, our passionate team of outside-the-box-thinking dating experts coalesced new age technology with traditional matchmaking in order to bring together Club Matched.
+                        </p>
+                        <button class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+                            Learn More
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute top-8 left-8 text-6xl font-light text-gray-200 z-10">ENHANCING YOUR LOVE LIFE</div>
+                    <img src="https://readdy.ai/api/search-image?query=overhead%20view%20of%20collaborative%20business%20team%20workspace%2C%20laptops%20computers%20charts%20graphs%2C%20professional%20office%20environment%2C%20business%20strategy%20meeting%2C%20modern%20workspace%20photography%2C%20team%20collaboration%2C%20business%20analytics%2C%20top-down%20perspective&width=600&height=500&seq=story001&orientation=landscape" alt="Team Collaboration" class="w-full rounded-2xl object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">Event Partners & Sponsors</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Proudly supported by leading luxury brands and industry partners
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                        <i class="ri-hotel-line text-3xl text-gray-600"></i>
+                    </div>
+                    <div class="text-sm font-medium text-gray-700">The Ritz-Carlton</div>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                        <i class="ri-goblet-line text-3xl text-gray-600"></i>
+                    </div>
+                    <div class="text-sm font-medium text-gray-700">Dom Pérignon</div>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                        <i class="ri-camera-line text-3xl text-gray-600"></i>
+                    </div>
+                    <div class="text-sm font-medium text-gray-700">Elite Photography</div>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                        <i class="ri-shirt-line text-3xl text-gray-600"></i>
+                    </div>
+                    <div class="text-sm font-medium text-gray-700">Luxury Fashion</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Now Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-light mb-6">Ready to Join Club Matched?</h2>
+            <p class="text-xl mb-8 opacity-90">
+                Exclusive membership opportunities available for qualified individuals
+            </p>
+            <div class="space-y-4 mb-8">
+                <p class="text-lg">✓ Professional matchmaking services</p>
+                <p class="text-lg">✓ Luxury lifestyle experiences</p>
+                <p class="text-lg">✓ Exclusive member events</p>
+                <p class="text-lg">✓ Personal coaching and consultation</p>
+            </div>
+            <button id="apply-now-btn" class="bg-white text-primary px-8 py-4 text-lg !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                Apply Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Apply Modal -->
+    <div id="apply-modal" class="fixed inset-0 bg-black/50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-semibold">Membership Application</h3>
+                        <button id="close-modal" class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600">
+                            <i class="ri-close-line text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <form id="application-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Age Range *</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <label class="flex items-center">
+                                    <input type="radio" name="age" value="25-35" class="sr-only">
+                                    <div class="w-4 h-4 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2 cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-sm">25-35</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="age" value="36-45" class="sr-only">
+                                    <div class="w-4 h-4 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2 cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-sm">36-45</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="age" value="46+" class="sr-only">
+                                    <div class="w-4 h-4 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2 cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-sm">46+</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Annual Income Range *</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="radio" name="income" value="$100k-250k" class="sr-only">
+                                    <div class="w-4 h-4 border-2 border-gray-300 rounded-full flex items-center justify-center mr-3 cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-sm">$100,000 - $250,000</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="income" value="$250k-500k" class="sr-only">
+                                    <div class="w-4 h-4 border-2 border-gray-300 rounded-full flex items-center justify-center mr-3 cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-sm">$250,000 - $500,000</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="income" value="$500k+" class="sr-only">
+                                    <div class="w-4 h-4 border-2 border-gray-300 rounded-full flex items-center justify-center mr-3 cursor-pointer radio-custom">
+                                        <div class="w-2 h-2 bg-primary rounded-full hidden"></div>
+                                    </div>
+                                    <span class="text-sm">$500,000+</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Relationship Goals *</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="sr-only">
+                                    <div class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center mr-3 cursor-pointer checkbox-custom">
+                                        <i class="ri-check-line text-white text-sm hidden"></i>
+                                    </div>
+                                    <span class="text-sm">Long-term relationship</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="sr-only">
+                                    <div class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center mr-3 cursor-pointer checkbox-custom">
+                                        <i class="ri-check-line text-white text-sm hidden"></i>
+                                    </div>
+                                    <span class="text-sm">Marriage</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="sr-only">
+                                    <div class="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center mr-3 cursor-pointer checkbox-custom">
+                                        <i class="ri-check-line text-white text-sm hidden"></i>
+                                    </div>
+                                    <span class="text-sm">Exclusive dating</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Previous Dating Experience</label>
+                            <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your dating history and what you're looking for"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white py-3 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-['Pacifico'] text-primary mb-4">CLUB MATCHED</div>
+                    <p class="text-gray-400 mb-4">
+                        Luxury matchmaking for the modern professional
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+                            <i class="ri-facebook-fill text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+                            <i class="ri-instagram-fill text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+                            <i class="ri-linkedin-fill text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Matchmaking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Coaching</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Photography</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Beverly Hills, CA</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>hello@clubmatched.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest events</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-sm">
+                        <button class="bg-primary px-4 py-2 rounded-r-lg hover:bg-primary/90 transition-colors">
+                            <i class="ri-send-plane-line text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Club Matched. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="checkbox-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.checkbox-custom');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('click', function() {
+                    const input = this.previousElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (input.checked) {
+                        input.checked = false;
+                        this.classList.remove('bg-primary', 'border-primary');
+                        this.classList.add('border-gray-300');
+                        icon.classList.add('hidden');
+                    } else {
+                        input.checked = true;
+                        this.classList.add('bg-primary', 'border-primary');
+                        this.classList.remove('border-gray-300');
+                        icon.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="radio-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            const radioGroups = {};
+            
+            document.querySelectorAll('.radio-custom').forEach(radio => {
+                const input = radio.previousElementSibling;
+                const groupName = input.name;
+                
+                if (!radioGroups[groupName]) {
+                    radioGroups[groupName] = [];
+                }
+                radioGroups[groupName].push({ radio, input });
+                
+                radio.addEventListener('click', function() {
+                    radioGroups[groupName].forEach(item => {
+                        const dot = item.radio.querySelector('div');
+                        item.input.checked = false;
+                        item.radio.classList.remove('border-primary');
+                        item.radio.classList.add('border-gray-300');
+                        dot.classList.add('hidden');
+                    });
+                    
+                    input.checked = true;
+                    this.classList.add('border-primary');
+                    this.classList.remove('border-gray-300');
+                    this.querySelector('div').classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+
+    <script id="modal-functionality">
+        document.addEventListener('DOMContentLoaded', function() {
+            const applyBtn = document.getElementById('apply-now-btn');
+            const modal = document.getElementById('apply-modal');
+            const closeBtn = document.getElementById('close-modal');
+            const form = document.getElementById('application-form');
+            
+            applyBtn.addEventListener('click', function() {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Application submitted successfully! We will contact you within 24 hours.');
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                form.reset();
+            });
+        });
+    </script>
+
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = 'vwNIPIXhlPUZdNNeaGCWHg';
+    window.host = 
+</script>
+</body>
+</html>
